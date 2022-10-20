@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+/* Reseting the default margin and padding adding some universal rules */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+}
+/* ============ Navbar ============ */
+#navbar {
+  background-color: #f44336;
+  height: 100vh;
+  width: 24%;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+#logo {
+  padding: 4rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+#navbar ul li a {
+  position: relative;
+  padding: 0.5rem 2.5rem;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  transform-origin: bottom left;
+}
+/* ============ Navbar list items HOVER============ */
+#navbar ul li a::before {
+  content: " ";
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: white;
+  z-index: -1;
+  transition: transform 0.2s ease;
+}
+#navbar ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.4s ease;
+}
+
+#navbar ul li a:hover {
+  color: black;
+}
+/* ============ Main ============ */
+#main-content {
+  width: 75%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+#page {
+  display: flex;
+}
+/* ============ Styling titles of the page ============ */
+h1 {
+  font-weight: 500;
+  padding-top: 6rem;
+  font-size: 4rem;
+}
+h2 {
+  font-weight: 500;
+  margin-top: 6rem;
+  margin-bottom: 1.25rem;
+  color: #f44336;
+  font-size: 3rem;
+}
+hr {
+  margin-bottom: 1.25rem;
+}
+/* making the image take the full width if there's any space left */
+img {
+  max-width: 100%;
+}
+/* ============ Showcase ============ */
+#showcase__imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#showcase h2 {
+  color: #f44336;
+  font-size: 3rem;
+  margin-bottom: 1.75rem;
+  margin-top: 0;
+}
+#showcase__imgs img {
+  width: 49.5%;
+  opacity: 0.75;
+}
+#showcase__imgs img:hover {
+  opacity: 1;
+  transition: all 0.2s ease-in;
+}
+#showcase__imgs img {
+  margin-bottom: 0.5rem;
+}
+#showcase hr {
+  margin-bottom: 2rem;
+}
+.line {
+  width: 4rem;
+  color: white;
+  height: 1px;
+  border: 6px solid #f44336;
+  border-radius: 20px;
+}
+/* ============ Services ============ */
+#services p:first-of-type {
+  margin-bottom: 1.25rem;
+}
+/* ============ Designers ============ */
+#designers > p:first-of-type {
+  margin-bottom: 1rem;
+}
+#designers > p:last-of-type {
+  margin: 1rem 0 0.75rem 0;
+  font-weight: 600;
+}
+/* ============ Designers images ============ */
+#designers__presentation {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+#designers__presentation article {
+  background-color: #f1f1f1;
+  transition: all 0.1s ease;
+}
+/* ============ Designers images HOVER============ */
+#designers__presentation article:hover {
+  transform: scale(1.1) translateY(21px);
+  transition: all 0.25s ease-out;
+}
+#designers__presentation article div {
+  padding: 0.5rem 1rem;
+}
+#designers__presentation article p:first-of-type {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#designers__presentation article p:nth-of-type(2) {
+  color: #707070;
+  margin-bottom: 1rem;
+}
+/* ============ Packages ============ */
+#packages p:first-of-type {
+  margin-bottom: 1rem;
+}
+#packages #features__box {
+  display: flex;
+  gap: 15px;
+}
+/* ============ Packages table ============ */
+.features {
+  background-color: #f1f1f1;
+  text-align: center;
+  width: 50%;
+}
+.features hr {
+  color: #f1f1f1;
+}
+.features:first-child p:first-child,
+.features:nth-child(2) p:first-child {
+  background-color: #616161;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  color: white;
+}
+.features:nth-child(2) p:first-child {
+  background-color: #f44336;
+}
+.features p:not(first-child) {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 16px 0;
+}
+.features p:nth-of-type(7) {
+  color: #616161;
+}
+.features p span {
+  color: black;
+  font-size: 2rem;
+}
+.features a {
+  display: inline-block;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 16px 0;
+  text-decoration: none;
+  color: black;
+}
+.features a,
+.features:nth-of-type(2) a {
+  background-color: white;
+  margin: 16px 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0;
+  border: none;
+  font-size: 1rem;
+}
+.features:nth-of-type(2) a {
+  color: white;
+}
+.features a:hover,
+.features:nth-of-type(2) a:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+.features:nth-of-type(2) a {
+  background-color: #f44336;
+}
+/* ============ Contact ============ */
+#contact {
+  padding-bottom: 13rem;
+}
+#contact > p {
+  margin-bottom: 1rem;
+}
+#contact__form input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #d2d2d2;
+  padding: 0 0.5rem;
+}
+#contact__form input[type="submit"] {
+  margin-top: 1rem;
+  background-color: #f44336;
+  border: none;
+  font-size: 1rem;
+  color: white;
+}
+/* ============ Contact HOVER ============ */
+#contact__form input[type="submit"]:hover {
+  background-color: #616161;
+  transition: all 0.2s ease-in;
+}
+/* ============ Footer ============ */
+footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #dfdfdf;
+  position: absolute;
+  right: 0;
+  left: 22%;
+  bottom: 0;
+  z-index: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 5rem;
+  padding-right: 3rem;
+}
+footer #social__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+footer #social__icons i {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+footer #social__icons i:hover {
+  color: black;
+  transition: color 0.3s ease;
+}
+#social__icons a {
+  color: #f44336;
+}
+footer span {
+  text-decoration: underline;
+}
